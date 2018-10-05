@@ -37,22 +37,22 @@ describe('galactic age calculator', function() {
 
   it('should return the remaining years left to live in Mercury years', function() {
     let yearsRemaining = 78.31;
-    expect(mercuryYearsLeft(yearsRemaining)).toEqual("have " + 326.29 + " Mercury years left to live");
+    expect(mercuryYearsLeft(yearsRemaining)).toEqual("have " + 326.29 + " years left to live");
   });
 
   it('should return the remaining years left to live in Venus years', function() {
     let yearsRemaining = 78.31;
-    expect(venusYearsLeft(yearsRemaining)).toEqual("have " + 126.31 + " Venus years left to live");
+    expect(venusYearsLeft(yearsRemaining)).toEqual("have " + 126.31 + " years left to live");
   });
 
   it('should return the remaining years left to live in Mars years', function() {
     let yearsRemaining = 78.31;
-    expect(marsYearsLeft(yearsRemaining)).toEqual("have " + 41.65 + " Mars years left to live");
+    expect(marsYearsLeft(yearsRemaining)).toEqual("have " + 41.65 + " years left to live");
   });
 
   it('should return the remaining years left to live in Jupiter years', function() {
     let yearsRemaining = 78.31;
-    expect(jupiterYearsLeft(yearsRemaining)).toEqual("have " + 6.6 + " Jupiter years left to live");
+    expect(jupiterYearsLeft(yearsRemaining)).toEqual("have " + 6.6 + " years left to live");
   });
 
   it('should return the years past life expectancy in Mercury years if user is older than inputted life expectancy', function() {

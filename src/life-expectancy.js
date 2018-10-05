@@ -14,7 +14,7 @@ export function mercuryYearsLeft(remainingYears) {
     yearsLeft = yearsLeft * (-1);
     return yearsLeft + " years past your life expectancy";
   } else {
-    return "have " + yearsLeft + " Mercury years left to live";
+    return "have " + yearsLeft + " years left to live";
   }
 
 }
@@ -28,7 +28,7 @@ export function venusYearsLeft(remainingYears) {
     yearsLeft = yearsLeft * (-1);
     return yearsLeft + " years past your life expectancy";
   } else {
-    return "have " + yearsLeft + " Venus years left to live";
+    return "have " + yearsLeft + " years left to live";
   }
 
 }
@@ -42,7 +42,7 @@ export function marsYearsLeft(remainingYears) {
     yearsLeft = yearsLeft * (-1);
     return yearsLeft + " years past your life expectancy";
   } else {
-    return "have " + yearsLeft + " Mars years left to live";
+    return "have " + yearsLeft + " years left to live";
   }
 
 }
@@ -56,7 +56,7 @@ export function jupiterYearsLeft(remainingYears) {
     yearsLeft = yearsLeft * (-1);
     return yearsLeft + " years past your life expectancy";
   } else {
-    return "have " + yearsLeft + " Jupiter years left to live";
+    return "have " + yearsLeft + " years left to live";
   }
 
 }
