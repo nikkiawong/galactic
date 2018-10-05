@@ -5,33 +5,49 @@
     <title>Super Galactic Age Calculator</title>
   </head>
   <body>
-    <form id="ageForm" action="index.html" method="post">
-      <p>Enter your date of birth:</p>
-      <input type="date">
-      <input type="text" placeholder="Your average life expectancy">
-      <button type="submit" name="button">Calculate!</button>
-    </form>
+    <div class="container">
+      <h1>Super Galactic Age Calculator</h1>
+      <form id="ageForm" action="index.html" method="post">
+        <label for="bday">Enter your date of birth:</label>
+        <input type="date" class="form-control" name="bday">
+        <label for="expectancy">Enter your average life expectancy in Earth years:</label>
+        <input type="text" class="form-control" name="expectancy">
+        <button type="submit" name="button" class="btn btn-info">Calculate!</button>
+      </form>
 
-    <div class="results">
-      <div class="earth">
-        <h2>Earth</h2>
-        <p>You are <span id="earthAgeText"></span> years old and have <span id="earthTimeRemaining"></span> years left to live</p>
-      </div>
-      <div class="mercury">
-        <h2>Mercury</h2>
-        <p>You are <span id="mercuryAgeText"></span> years old and <span id="mercuryTimeRemaining"></span>  </p>
-      </div>
-      <div class="venus">
-        <h2>Venus</h2>
-        <p>You are <span id="venusAgeText"></span> years old and <span id="venusTimeRemaining"></span>  </p>
-      </div>
-      <div class="mars">
-        <h2>Mars</h2>
-        <p>You are <span id="marsAgeText"></span> years old and <span id="marsTimeRemaining"></span>  </p>
-      </div>
-      <div class="jupiter">
-        <h2>Jupiter</h2>
-        <p>You are <span id="jupiterAgeText"></span> years old and <span id="jupiterTimeRemaining"></span>  </p>
+      <div class="results">
+        <div class="earth">
+          <h2>Earth</h2>
+          <p>You are <span id="earthAgeText"></span> years old and have <span id="earthTimeRemaining"></span> years left to live</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mercury">
+              <h2>Mercury</h2>
+              <p>You are <span id="mercuryAgeText"></span> years old and <span id="mercuryTimeRemaining"></span>  </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="venus">
+              <h2>Venus</h2>
+              <p>You are <span id="venusAgeText"></span> years old and <span id="venusTimeRemaining"></span>  </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mars">
+              <h2>Mars</h2>
+              <p>You are <span id="marsAgeText"></span> years old and <span id="marsTimeRemaining"></span>  </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="jupiter">
+              <h2>Jupiter</h2>
+              <p>You are <span id="jupiterAgeText"></span> years old and <span id="jupiterTimeRemaining"></span>  </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

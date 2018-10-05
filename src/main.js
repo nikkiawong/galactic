@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { getAge } from './age.js';
 import { convertToMercuryYears } from './convert.js';
