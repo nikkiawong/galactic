@@ -16,19 +16,19 @@ This application calculates a user’s age based on a planet’s solar years and
 
 * When a user submits their date of birth, their age in Venus years is returned
   * Example Input: February 1, 1997
-  * Example Output: 33.8709677419
+  * Example Output: 33.87096774193549
 
 * When a user submits their date of birth, their age in Mars years is returned
   * Example Input: February 1, 1997
-  * Example Output: 11.1702128
+  * Example Output: 11.170212765957448
 
 * When a user submits their date of birth, their age in Jupiter years is returned
   * Example Input: February 1, 1997
-  * Example Output: 1.77065767
+  * Example Output: 1.7706576728499157
 
 * When a user submits their date of birth and life expectancy in Earth years, their remaining life expectancy in Mercury years is returned
   * Example Input: February 1, 1997; 100
-  * Example Output: 329.166666667
+  * Example Output: 329.1666666666667
 
 * When a user submits their date of birth and life expectancy in Earth years, their remaining life expectancy in Venus years is returned
   * Example Input: February 1, 1997; 100
