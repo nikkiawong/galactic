@@ -24,7 +24,13 @@ export function venusYearsLeft(remainingYears) {
   let yearsLeft = remainingYears / 0.62;
   yearsLeft = parseFloat(yearsLeft.toFixed(2));
 
-  return yearsLeft;
+  if (remainingYears < 0) {
+    yearsLeft = yearsLeft * (-1);
+    return yearsLeft;
+  } else {
+    return yearsLeft;
+  }
+
 }
 
 export function marsYearsLeft(remainingYears) {
