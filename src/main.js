@@ -53,6 +53,5 @@ $(document).ready(function() {
 
     let nextBirthday = getNextEarthBirthday(birthday, userAge);
     $("#earthBirthday").text(nextBirthday);
-
   });
 });

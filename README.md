@@ -62,22 +62,6 @@ This application calculates a user’s age based on a planet’s solar years and
   * Example Input: 02-01-1997
   * Example Output: Fri Feb 01 2019
 
-* When a user submits their date of birth, their next birthday on Mercury is returned
-  * Example Input: 02-01-1997
-  * Example Output: Sat Oct 06 2018
-
-* When a user submits their date of birth, their next birthday on Venus is returned
-  * Example Input: 02-01-1997
-  * Example Output: Wed Mar 27 2019
-
-* When a user submits their date of birth, their next birthday on Mars is returned
-  * Example Input: 02-01-1997
-  * Example Output: Wed Aug 28 2019
-
-* When a user submits their date of birth, their next birthday on Jupiter is returned
-  * Example Input: 02-01-1997
-  * Example Output: Fri Oct 23 2020
-
 ## Setup Instructions
 
 * Install Node.js
