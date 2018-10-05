@@ -12,51 +12,51 @@ This application calculates a user’s age based on a planet’s solar years and
 
 * When a user submits their date of birth, their age in Mercury years is returned
   * Example Input: February 1, 1997
-  * Example Output: 87.5
+  * Example Output: 90.37009860767589
 
 * When a user submits their date of birth, their age in Venus years is returned
   * Example Input: February 1, 1997
-  * Example Output: 33.87096774193549
+  * Example Output: 34.98197365458421
 
 * When a user submits their date of birth, their age in Mars years is returned
   * Example Input: February 1, 1997
-  * Example Output: 11.170212765957448
+  * Example Output: 11.536608332894794
 
 * When a user submits their date of birth, their age in Jupiter years is returned
   * Example Input: February 1, 1997
-  * Example Output: 1.7706576728499157
+  * Example Output: 1.8287372399529689
 
 * When a user submits their date of birth and life expectancy in Earth years, their remaining life expectancy in Mercury years is returned
   * Example Input: February 1, 1997; 100
-  * Example Output: 329.1666666666667
+  * Example Output: 326.29656805899083
 
 * When a user submits their date of birth and life expectancy in Earth years, their remaining life expectancy in Venus years is returned
   * Example Input: February 1, 1997; 100
-  * Example Output: 127.419355
+  * Example Output: 126.30834892606096
 
 * When a user submits their date of birth and life expectancy in Earth years, their remaining life expectancy in Mars years is returned
   * Example Input: February 1, 1997; 100
-  * Example Output: 42.0212766
+  * Example Output: 41.65488102880734
 
 * When a user submits their date of birth and life expectancy in Earth years, their remaining life expectancy in Jupiter years is returned
   * Example Input: February 1, 1997; 100
-  * Example Output: 6.66104553
+  * Example Output: 6.602965964094249
 
 * When a user submits their date of birth and life expectancy in Earth years, if they have already passed their average life expectancy their years past life expectancy in Mercury years is returned
   * Example Input: October 5, 1917; 100
-  * Example Output: 4.16666667
+  * Example Output: 4.4568656651657435
 
 * When a user submits their date of birth and life expectancy in Earth years, if they have already passed their average life expectancy their years past life expectancy in Venus years is returned
   * Example Input: October 5, 1917; 100
-  * Example Output: 1.61290323
+  * Example Output: 1.7252383219996426
 
 * When a user submits their date of birth and life expectancy in Earth years, if they have already passed their average life expectancy their years past life expectancy in Mars years is returned
   * Example Input: October 5, 1917; 100
-  * Example Output: 0.53191489
+  * Example Output: 0.5689615742764779
 
 * When a user submits their date of birth and life expectancy in Earth years, if they have already passed their average life expectancy their years past life expectancy in Jupiter years is returned
   * Example Input: October 5, 1917; 100
-  * Example Output: 0.08431703
+  * Example Output: 0.09018952442156648
 
 ## Setup Instructions
 
