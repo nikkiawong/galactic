@@ -12,6 +12,7 @@ import { mercuryYearsLeft } from './life-expectancy.js';
 import { venusYearsLeft } from './life-expectancy.js';
 import { marsYearsLeft } from './life-expectancy.js';
 import { jupiterYearsLeft } from './life-expectancy.js';
+import { getNextEarthBirthday } from './birthday.js';
 
 $(document).ready(function() {
   $("#ageForm").submit(function() {
@@ -49,5 +50,9 @@ $(document).ready(function() {
 
     let jupiterLifeExpectancy = jupiterYearsLeft(remainingYears);
     $("#jupiterTimeRemaining").text(jupiterLifeExpectancy);
+
+    let nextBirthday = getNextEarthBirthday(birthday, userAge);
+    $("#earthBirthday").text(nextBirthday);
+
   });
 });

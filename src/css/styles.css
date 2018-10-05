@@ -1,6 +1,6 @@
 body {
   margin-top: 50px;
-  margin-bottom: 90px;
+  margin-bottom: 150px;
   text-align: center;
   color: white;
   background: url('../img/bg.jpg') center center repeat;
@@ -20,7 +20,7 @@ form {
   margin-bottom: 65px;
 }
 
-input, p {
+input, .row {
   margin-bottom: 30px;
 }
 
