@@ -38,7 +38,13 @@ export function marsYearsLeft(remainingYears) {
   let yearsLeft = remainingYears / 1.88;
   yearsLeft = parseFloat(yearsLeft.toFixed(2));
 
-  return yearsLeft;
+  if (remainingYears < 0) {
+    yearsLeft = yearsLeft * (-1);
+    return yearsLeft;
+  } else {
+    return yearsLeft;
+  }
+
 }
 
 export function jupiterYearsLeft(remainingYears) {
