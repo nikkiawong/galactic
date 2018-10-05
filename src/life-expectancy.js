@@ -52,5 +52,11 @@ export function jupiterYearsLeft(remainingYears) {
   let yearsLeft = remainingYears / 11.86;
   yearsLeft = parseFloat(yearsLeft.toFixed(2));
 
-  return yearsLeft;
+  if (remainingYears < 0) {
+    yearsLeft = yearsLeft * (-1);
+    return yearsLeft;
+  } else {
+    return yearsLeft;
+  }
+
 }

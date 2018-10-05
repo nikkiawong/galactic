@@ -69,4 +69,9 @@ describe('galactic age calculator', function() {
     let remainingYears = -1.07;
     expect(marsYearsLeft(remainingYears)).toEqual(0.57);
   });
+
+  it('should return the years past life expectancy in Jupiter years if user is older than inputted life expectancy', function() {
+    let remainingYears = -1.07;
+    expect(jupiterYearsLeft(remainingYears)).toEqual(0.09);
+  });
 });
