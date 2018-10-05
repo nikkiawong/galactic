@@ -8,6 +8,7 @@ import { convertToJupiterYears } from './convert.js';
 import { calculateYearsLeft } from './life-expectancy.js';
 import { mercuryYearsLeft } from './life-expectancy.js';
 import { venusYearsLeft } from './life-expectancy.js';
+import { marsYearsLeft } from './life-expectancy.js';
 
 $(document).ready(function() {
   $("#ageForm").submit(function() {
@@ -38,5 +39,8 @@ $(document).ready(function() {
 
     let venusLifeExpectancy = venusYearsLeft(remainingYears, userAge, lifeExpectancy);
     console.log(venusLifeExpectancy);
+
+    let marsLifeExpectancy = marsYearsLeft(remainingYears, userAge, lifeExpectancy);
+    console.log(marsLifeExpectancy);
   });
 });
