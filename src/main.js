@@ -33,18 +33,18 @@ $(document).ready(function() {
     console.log("You are " + jupiterAge + " Jupiter years old");
 
     let remainingYears = calculateYearsLeft(lifeExpectancy, userAge);
-    console.log(remainingYears);
+    console.log("years left to live:  " + remainingYears);
 
     let mercuryLifeExpectancy = mercuryYearsLeft(remainingYears, userAge, lifeExpectancy);
-    console.log(mercuryLifeExpectancy);
+    console.log("mercury life expectancy: " + mercuryLifeExpectancy);
 
     let venusLifeExpectancy = venusYearsLeft(remainingYears, userAge, lifeExpectancy);
-    console.log(venusLifeExpectancy);
+    console.log("venus life expectancy: " + venusLifeExpectancy);
 
     let marsLifeExpectancy = marsYearsLeft(remainingYears, userAge, lifeExpectancy);
-    console.log(marsLifeExpectancy);
+    console.log("mars life expectancy: " + marsLifeExpectancy);
 
     let jupiterLifeExpectancy = jupiterYearsLeft(remainingYears, userAge, lifeExpectancy);
-    console.log(jupiterLifeExpectancy);
+    console.log("jupiter life expectancy: " + jupiterLifeExpectancy);
   });
 });

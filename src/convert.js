@@ -1,7 +1,6 @@
 export function convertToMercuryYears(userAge) {
   let age = userAge / 0.24;
   age = age.toFixed(2);
-  console.log(parseFloat(age));
   return parseFloat(age);
 }
 

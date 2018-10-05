@@ -52,6 +52,11 @@ describe('galactic age calculator', function() {
 
   it('should return the remaining years left to live in Jupiter years', function() {
     let yearsRemaining = 78.31;
-    expect(jupiterYearsLeft(yearsRemaining)).toEqual(6.60);
+    expect(jupiterYearsLeft(yearsRemaining)).toEqual(6.6);
+  });
+
+  it('should return the years past life expectancy in Mercury years if user is older than inputted life expectancy', function() {
+    let remainingYears = -1.07;
+    expect(mercuryYearsLeft(remainingYears)).toEqual(4.46);
   });
 });

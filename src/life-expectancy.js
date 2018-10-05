@@ -5,15 +5,21 @@ export function calculateYearsLeft( lifeExpectancy, userAge) {
   return yearsLeft;
 }
 
-export function mercuryYearsLeft(remainingYears, userAge, lifeExpectancy) {
+export function mercuryYearsLeft(remainingYears) {
 
   let yearsLeft = remainingYears / 0.24;
   yearsLeft = parseFloat(yearsLeft.toFixed(2));
 
-  return yearsLeft;
+  if (remainingYears < 0) {
+    yearsLeft = yearsLeft * (-1);
+    return yearsLeft;
+  } else {
+    return yearsLeft;
+  }
+
 }
 
-export function venusYearsLeft(remainingYears, userAge, lifeExpectancy) {
+export function venusYearsLeft(remainingYears) {
 
   let yearsLeft = remainingYears / 0.62;
   yearsLeft = parseFloat(yearsLeft.toFixed(2));
@@ -21,7 +27,7 @@ export function venusYearsLeft(remainingYears, userAge, lifeExpectancy) {
   return yearsLeft;
 }
 
-export function marsYearsLeft(remainingYears, userAge, lifeExpectancy) {
+export function marsYearsLeft(remainingYears) {
 
   let yearsLeft = remainingYears / 1.88;
   yearsLeft = parseFloat(yearsLeft.toFixed(2));
@@ -29,7 +35,7 @@ export function marsYearsLeft(remainingYears, userAge, lifeExpectancy) {
   return yearsLeft;
 }
 
-export function jupiterYearsLeft(remainingYears, userAge, lifeExpectancy) {
+export function jupiterYearsLeft(remainingYears) {
 
   let yearsLeft = remainingYears / 11.86;
   yearsLeft = parseFloat(yearsLeft.toFixed(2));
