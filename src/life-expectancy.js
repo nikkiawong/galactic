@@ -9,3 +9,10 @@ export function mercuryYearsLeft(remainingYears, userAge, lifeExpectancy) {
 
   return yearsLeft;
 }
+
+export function venusYearsLeft(remainingYears, userAge, lifeExpectancy) {
+
+  let yearsLeft = remainingYears / 0.62;
+
+  return yearsLeft;
+}

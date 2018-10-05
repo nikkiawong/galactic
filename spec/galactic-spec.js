@@ -4,6 +4,7 @@ import { convertToVenusYears } from '../src/convert.js';
 import { convertToMarsYears } from '../src/convert.js';
 import { convertToJupiterYears } from '../src/convert.js';
 import { mercuryYearsLeft } from '../src/life-expectancy.js';
+import { venusYearsLeft } from '../src/life-expectancy.js';
 
 describe('galactic age calculator', function() {
 
@@ -35,5 +36,10 @@ describe('galactic age calculator', function() {
   it('should return the remaining years left to live in Mercury years', function() {
     let yearsRemaining = "79";
     expect(mercuryYearsLeft(yearsRemaining)).toEqual(329.1666666666667);
+  });
+
+  it('should return the remaining years left to live in Venus years', function() {
+    let yearsRemaining = "79";
+    expect(venusYearsLeft(yearsRemaining)).toEqual(127.41935483870968);
   });
 });
