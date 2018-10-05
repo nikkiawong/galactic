@@ -33,6 +33,7 @@ $(document).ready(function() {
     console.log("You are " + jupiterAge + " Jupiter years old");
 
     let remainingYears = calculateYearsLeft(lifeExpectancy, userAge);
+    console.log(remainingYears);
 
     let mercuryLifeExpectancy = mercuryYearsLeft(remainingYears, userAge, lifeExpectancy);
     console.log(mercuryLifeExpectancy);

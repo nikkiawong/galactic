@@ -1,19 +1,24 @@
 export function convertToMercuryYears(userAge) {
   let age = userAge / 0.24;
-  return age;
+  age = age.toFixed(2);
+  console.log(parseFloat(age));
+  return parseFloat(age);
 }
 
 export function convertToVenusYears(userAge) {
   let age = userAge / 0.62;
-  return age;
+  age = age.toFixed(2);
+  return parseFloat(age);
 }
 
 export function convertToMarsYears(userAge) {
   let age = userAge / 1.88;
-  return age;
+  age = age.toFixed(2);
+  return parseFloat(age);
 }
 
 export function convertToJupiterYears(userAge) {
   let age = userAge / 11.86;
-  return age;
+  age = age.toFixed(2);
+  return parseFloat(age);
 }
