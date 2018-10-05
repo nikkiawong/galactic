@@ -1,6 +1,15 @@
 body {
   margin-top: 50px;
+  margin-bottom: 90px;
   text-align: center;
+  color: white;
+  background: url('../img/bg.jpg') center center repeat;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Exo', sans-serif;
+  color: #77ffff;
 }
 
 form {
@@ -8,8 +17,22 @@ form {
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
+  margin-bottom: 65px;
 }
 
-input, button, form > p {
+input, p {
   margin-bottom: 30px;
+}
+
+.results {
+  display: none;
+}
+
+img {
+  width: 400px;
+  margin-bottom: 30px;
+}
+
+#earthImage {
+  width: 250px;
 }

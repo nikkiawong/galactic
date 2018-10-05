@@ -18,6 +18,7 @@ $(document).ready(function() {
     event.preventDefault();
     let birthday = $("input[type='date']").val();
     let lifeExpectancy = $("input[type='text']").val();
+    $(".results").fadeIn();
 
     let userAge = getAge(birthday);
     $("#earthAgeText").text(userAge);
