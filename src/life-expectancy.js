@@ -23,3 +23,10 @@ export function marsYearsLeft(remainingYears, userAge, lifeExpectancy) {
 
   return yearsLeft;
 }
+
+export function jupiterYearsLeft(remainingYears, userAge, lifeExpectancy) {
+
+  let yearsLeft = remainingYears / 11.86;
+
+  return yearsLeft;
+}
