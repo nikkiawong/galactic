@@ -7,6 +7,7 @@ import { mercuryYearsLeft } from '../src/life-expectancy.js';
 import { venusYearsLeft } from '../src/life-expectancy.js';
 import { marsYearsLeft } from '../src/life-expectancy.js';
 import { jupiterYearsLeft } from '../src/life-expectancy.js';
+import { getNextEarthBirthday } from '../src/birthday.js';
 
 describe('galactic age calculator', function() {
 
@@ -73,5 +74,11 @@ describe('galactic age calculator', function() {
   it('should return the years past life expectancy in Jupiter years if user is older than inputted life expectancy', function() {
     let remainingYears = -1.07;
     expect(jupiterYearsLeft(remainingYears)).toEqual(0.09 + " years past your life expectancy");
+  });
+
+  it('should return the next Earth birthday of the user', function() {
+    let birthday = "1997-02-01";
+    let userAge = 21.69;
+    expect(getNextEarthBirthday(birthday, userAge)).toEqual('Fri Feb 01 2019');
   });
 });
