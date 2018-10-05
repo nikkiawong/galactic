@@ -24,13 +24,13 @@ $(document).ready(function() {
     $("#mercuryAgeText").text(mercuryAge);
 
     let venusAge = convertToVenusYears(userAge);
-    console.log("You are " + venusAge + " Venus years old");
+    $("#venusAgeText").text(venusAge);
 
     let marsAge = convertToMarsYears(userAge);
-    console.log("You are " + marsAge + " Mars years old");
+    $("#marsAgeText").text(marsAge);
 
     let jupiterAge = convertToJupiterYears(userAge);
-    console.log("You are " + jupiterAge + " Jupiter years old");
+    $("#jupiterAgeText").text(jupiterAge);
 
     let remainingYears = calculateYearsLeft(lifeExpectancy, userAge);
     $("#earthTimeRemaining").text(remainingYears);
@@ -38,13 +38,13 @@ $(document).ready(function() {
     let mercuryLifeExpectancy = mercuryYearsLeft(remainingYears);
     $("#mercuryTimeRemaining").text(mercuryLifeExpectancy);
 
-    let venusLifeExpectancy = venusYearsLeft(remainingYears, userAge, lifeExpectancy);
-    console.log(venusLifeExpectancy);
+    let venusLifeExpectancy = venusYearsLeft(remainingYears);
+    $("#venusTimeRemaining").text(venusLifeExpectancy);
 
     let marsLifeExpectancy = marsYearsLeft(remainingYears);
-    console.log(marsLifeExpectancy);
+    $("#marsTimeRemaining").text(marsLifeExpectancy);
 
     let jupiterLifeExpectancy = jupiterYearsLeft(remainingYears);
-    console.log(jupiterLifeExpectancy);
+    $("#jupiterTimeRemaining").text(jupiterLifeExpectancy);
   });
 });
