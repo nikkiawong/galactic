@@ -16,7 +16,6 @@ $(document).ready(function() {
     event.preventDefault();
     let birthday = $("input[type='date']").val();
     let lifeExpectancy = $("input[type='text']").val();
-    console.log(lifeExpectancy + " years");
 
     let userAge = getAge(birthday);
     console.log("You are " + userAge + " Earth years old");
