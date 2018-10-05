@@ -12,9 +12,9 @@ export function mercuryYearsLeft(remainingYears) {
 
   if (remainingYears < 0) {
     yearsLeft = yearsLeft * (-1);
-    return "You are " + yearsLeft + " Mercury years past your life expectancy";
+    return yearsLeft + " years past your life expectancy";
   } else {
-    return "You have " + yearsLeft + " Mercury years left to live";
+    return "have " + yearsLeft + " Mercury years left to live";
   }
 
 }
@@ -26,9 +26,9 @@ export function venusYearsLeft(remainingYears) {
 
   if (remainingYears < 0) {
     yearsLeft = yearsLeft * (-1);
-    return "You are " + yearsLeft + " Venus years past your life expectancy";
+    return yearsLeft + " years past your life expectancy";
   } else {
-    return "You have " + yearsLeft + " Venus years left to live";
+    return "have " + yearsLeft + " Venus years left to live";
   }
 
 }
@@ -40,9 +40,9 @@ export function marsYearsLeft(remainingYears) {
 
   if (remainingYears < 0) {
     yearsLeft = yearsLeft * (-1);
-    return "You are " + yearsLeft + " Mars years past your life expectancy";
+    return yearsLeft + " years past your life expectancy";
   } else {
-    return "You have " + yearsLeft + " Mars years left to live";
+    return "have " + yearsLeft + " Mars years left to live";
   }
 
 }
@@ -54,9 +54,9 @@ export function jupiterYearsLeft(remainingYears) {
 
   if (remainingYears < 0) {
     yearsLeft = yearsLeft * (-1);
-    return "You are " + yearsLeft + " Jupiter years past your life expectancy";
+    return yearsLeft + " years past your life expectancy";
   } else {
-    return "You have " + yearsLeft + " Jupiter years left to live";
+    return "have " + yearsLeft + " Jupiter years left to live";
   }
 
 }
