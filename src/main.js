@@ -13,5 +13,6 @@ $(document).ready(function() {
     console.log("You are " + userAge + " Earth years old");
 
     let mercuryAge = convertToMercuryYears(userAge);
+    console.log("You are " + mercuryAge + " Mercury years old");
   });
 });
