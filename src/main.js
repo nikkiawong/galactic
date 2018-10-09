@@ -2,11 +2,6 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { calculateYearsLeft } from './life-expectancy.js';
-import { mercuryYearsLeft } from './life-expectancy.js';
-import { venusYearsLeft } from './life-expectancy.js';
-import { marsYearsLeft } from './life-expectancy.js';
-import { jupiterYearsLeft } from './life-expectancy.js';
 import { getNextEarthBirthday } from './birthday.js';
 import AgeConverter from './AgeConverter.js';
 

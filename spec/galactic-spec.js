@@ -1,7 +1,3 @@
-import { mercuryYearsLeft } from '../src/life-expectancy.js';
-import { venusYearsLeft } from '../src/life-expectancy.js';
-import { marsYearsLeft } from '../src/life-expectancy.js';
-import { jupiterYearsLeft } from '../src/life-expectancy.js';
 import { getNextEarthBirthday } from '../src/birthday.js';
 import AgeConverter from '../src/AgeConverter.js';
 
