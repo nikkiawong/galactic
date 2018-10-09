@@ -12,7 +12,6 @@ $(document).ready(function() {
     $(".results").fadeIn();
 
     let userAge = new AgeConverter(birthday, lifeExpectancy);
-    console.log(userAge);
 
     $("#earthAgeText").text(userAge.age);
     $("#mercuryAgeText").text(userAge.mercuryAge);
