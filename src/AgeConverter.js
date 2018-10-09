@@ -12,6 +12,7 @@ export default class AgeConverter {
     this.venusYearsLeft = this.venusYearsLeft();
     this.marsYearsLeft = this.marsYearsLeft();
     this.jupiterYearsLeft = this.jupiterYearsLeft();
+    this.nextBirthday = this.getNextEarthBirthday();
   }
 
   getAge() {
@@ -25,8 +26,7 @@ export default class AgeConverter {
   }
 
   convertToMercuryYears() {
-    let userAge1 = this.age;
-
+    const userAge1 = this.age;
     let age = userAge1 / 0.24;
     age = parseInt(age);
 
@@ -34,8 +34,7 @@ export default class AgeConverter {
   }
 
   convertToVenusYears() {
-    let userAge1 = this.age;
-
+    const userAge1 = this.age;
     let age = userAge1 / 0.62;
     age = parseInt(age);
 
@@ -43,8 +42,7 @@ export default class AgeConverter {
   }
 
   convertToMarsYears() {
-    let userAge1 = this.age;
-
+    const userAge1 = this.age;
     let age = userAge1 / 1.88;
     age = parseInt(age);
 
@@ -52,8 +50,7 @@ export default class AgeConverter {
   }
 
   convertToJupiterYears() {
-    let userAge1 = this.age;
-
+    const userAge1 = this.age;
     let age = userAge1 / 11.86;
     age = parseInt(age);
 
@@ -63,7 +60,6 @@ export default class AgeConverter {
   calculateYearsLeft() {
     let yearsLeft = this.lifeExpectancy - this.age;
 
-    console.log(parseInt(yearsLeft));
     return parseInt(yearsLeft);
   }
 
@@ -118,5 +114,15 @@ export default class AgeConverter {
     }
 
 
+  }
+
+  getNextEarthBirthday() {
+    let ageNextYear = parseInt(this.age) + 1;
+    const day = new Date(this.dateString);
+    const combinedMilliseconds = day.valueOf() + (ageNextYear * 31556952000);
+    let nextDay = new Date(combinedMilliseconds);
+    nextDay = nextDay.toDateString();
+
+    return nextDay;
   }
 }

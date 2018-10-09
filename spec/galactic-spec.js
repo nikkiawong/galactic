@@ -1,4 +1,3 @@
-import { getNextEarthBirthday } from '../src/birthday.js';
 import AgeConverter from '../src/AgeConverter.js';
 
 describe('galactic age calculator', function() {
@@ -74,8 +73,7 @@ describe('galactic age calculator', function() {
   });
 
   it('should return the next Earth birthday of the user', function() {
-    let birthday = "1997-02-01";
-    let userAge = 21;
-    expect(getNextEarthBirthday(birthday, userAge)).toEqual('Fri Feb 01 2019');
+    let ageInstance = new AgeConverter("1997-02-01");
+    expect(ageInstance.nextBirthday).toEqual('Fri Feb 01 2019');
   });
 });

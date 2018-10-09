@@ -2,7 +2,6 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { getNextEarthBirthday } from './birthday.js';
 import AgeConverter from './AgeConverter.js';
 
 $(document).ready(function() {
@@ -25,8 +24,6 @@ $(document).ready(function() {
     $("#venusTimeRemaining").text(userAge.venusYearsLeft);
     $("#marsTimeRemaining").text(userAge.marsYearsLeft);
     $("#jupiterTimeRemaining").text(userAge.jupiterYearsLeft);
-
-    let nextBirthday = getNextEarthBirthday(birthday, userAge.age);
-    $("#earthBirthday").text(nextBirthday);
+    $("#earthBirthday").text(userAge.nextBirthday);
   });
 });
