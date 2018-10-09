@@ -1,8 +1,3 @@
-import { getAge } from '../src/age.js';
-import { convertToMercuryYears } from '../src/convert.js';
-import { convertToVenusYears } from '../src/convert.js';
-import { convertToMarsYears } from '../src/convert.js';
-import { convertToJupiterYears } from '../src/convert.js';
 import { mercuryYearsLeft } from '../src/life-expectancy.js';
 import { venusYearsLeft } from '../src/life-expectancy.js';
 import { marsYearsLeft } from '../src/life-expectancy.js';
