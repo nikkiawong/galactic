@@ -2,17 +2,13 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { getAge } from './age.js';
-import { convertToMercuryYears } from './convert.js';
-import { convertToVenusYears } from './convert.js';
-import { convertToMarsYears } from './convert.js';
-import { convertToJupiterYears } from './convert.js';
 import { calculateYearsLeft } from './life-expectancy.js';
 import { mercuryYearsLeft } from './life-expectancy.js';
 import { venusYearsLeft } from './life-expectancy.js';
 import { marsYearsLeft } from './life-expectancy.js';
 import { jupiterYearsLeft } from './life-expectancy.js';
 import { getNextEarthBirthday } from './birthday.js';
+import AgeConverter from './AgeConverter.js';
 
 $(document).ready(function() {
   $("#ageForm").submit(function() {
@@ -21,22 +17,15 @@ $(document).ready(function() {
     let lifeExpectancy = $("input[type='text']").val();
     $(".results").fadeIn();
 
-    let userAge = getAge(birthday);
-    $("#earthAgeText").text(userAge);
+    let test = new AgeConverter(birthday, lifeExpectancy);
 
-    let mercuryAge = convertToMercuryYears(userAge);
-    $("#mercuryAgeText").text(mercuryAge);
+    $("#earthAgeText").text(test.age);
+    $("#mercuryAgeText").text(test.mercuryAge);
+    $("#venusAgeText").text(test.venusAge);
+    $("#marsAgeText").text(test.marsAge);
+    $("#jupiterAgeText").text(test.jupiterAge);
 
-    let venusAge = convertToVenusYears(userAge);
-    $("#venusAgeText").text(venusAge);
-
-    let marsAge = convertToMarsYears(userAge);
-    $("#marsAgeText").text(marsAge);
-
-    let jupiterAge = convertToJupiterYears(userAge);
-    $("#jupiterAgeText").text(jupiterAge);
-
-    let remainingYears = calculateYearsLeft(lifeExpectancy, userAge);
+    let remainingYears = calculateYearsLeft(lifeExpectancy, test.age);
     $("#earthTimeRemaining").text(remainingYears);
 
     let mercuryLifeExpectancy = mercuryYearsLeft(remainingYears);
@@ -51,7 +40,7 @@ $(document).ready(function() {
     let jupiterLifeExpectancy = jupiterYearsLeft(remainingYears);
     $("#jupiterTimeRemaining").text(jupiterLifeExpectancy);
 
-    let nextBirthday = getNextEarthBirthday(birthday, userAge);
+    let nextBirthday = getNextEarthBirthday(birthday, test.age);
     $("#earthBirthday").text(nextBirthday);
   });
 });

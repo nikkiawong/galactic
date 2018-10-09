@@ -8,77 +8,83 @@ import { venusYearsLeft } from '../src/life-expectancy.js';
 import { marsYearsLeft } from '../src/life-expectancy.js';
 import { jupiterYearsLeft } from '../src/life-expectancy.js';
 import { getNextEarthBirthday } from '../src/birthday.js';
+import AgeConverter from '../src/AgeConverter.js';
 
 describe('galactic age calculator', function() {
 
+  it('should instantiate AgeConverter object', function() {
+    const dob = "1997-02-01"; const ageConverter = new AgeConverter(dob);
+    expect(ageConverter instanceof AgeConverter).toBe(true);
+  });
+
   it('should return the user age in Earth years', function() {
-    let dob = "1997-02-01";
-    expect(getAge(dob)).toEqual(21.69);
+    let ageInstance = new AgeConverter("1997-02-01");
+    expect(ageInstance.age).toEqual(21);
   });
 
   it('should return the user age in Mercury years', function() {
-    let earthAge = 21.69;
-    expect(convertToMercuryYears(earthAge)).toEqual(90.38);
+    let ageInstance = new AgeConverter("1997-02-01");
+    expect(ageInstance.mercuryAge).toEqual(87);
   });
 
   it('should return the user age in Venus years', function() {
-    let earthAge = 21.69;
-    expect(convertToVenusYears(earthAge)).toEqual(34.98);
+    let ageInstance = new AgeConverter("1997-02-01");
+    expect(ageInstance.venusAge).toEqual(33);
   });
 
   it('should return the user age in Mars years', function() {
-    let earthAge = 21.69;
-    expect(convertToMarsYears(earthAge)).toEqual(11.54);
+    let ageInstance = new AgeConverter("1997-02-01");
+    expect(ageInstance.marsAge).toEqual(11);
   });
 
   it('should return the user age in Jupiter years', function() {
-    let earthAge = 21.69;
-    expect(convertToJupiterYears(earthAge)).toEqual(1.83);
+    let ageInstance = new AgeConverter("1997-02-01");
+    expect(ageInstance.jupiterAge).toEqual(1);
   });
 
   it('should return the remaining years left to live in Mercury years', function() {
-    let yearsRemaining = 78.31;
-    expect(mercuryYearsLeft(yearsRemaining)).toEqual("have " + 326.29 + " years left to live");
+    let yearsRemaining = 79;
+    expect(mercuryYearsLeft(yearsRemaining)).toEqual("have " + 329 + " years left to live");
   });
 
   it('should return the remaining years left to live in Venus years', function() {
-    let yearsRemaining = 78.31;
-    expect(venusYearsLeft(yearsRemaining)).toEqual("have " + 126.31 + " years left to live");
+    let yearsRemaining = 79;
+    expect(venusYearsLeft(yearsRemaining)).toEqual("have " + 127 + " years left to live");
   });
 
   it('should return the remaining years left to live in Mars years', function() {
-    let yearsRemaining = 78.31;
-    expect(marsYearsLeft(yearsRemaining)).toEqual("have " + 41.65 + " years left to live");
+    let yearsRemaining = 79;
+    expect(marsYearsLeft(yearsRemaining)).toEqual("have " + 42 + " years left to live");
   });
 
   it('should return the remaining years left to live in Jupiter years', function() {
-    let yearsRemaining = 78.31;
-    expect(jupiterYearsLeft(yearsRemaining)).toEqual("have " + 6.6 + " years left to live");
+    let yearsRemaining = 79;
+    expect(jupiterYearsLeft(yearsRemaining)).toEqual("have " + 6 + " years left to live");
   });
 
   it('should return the years past life expectancy in Mercury years if user is older than inputted life expectancy', function() {
-    let remainingYears = -1.07;
-    expect(mercuryYearsLeft(remainingYears)).toEqual(4.46 + " years past your life expectancy");
+    let remainingYears = -1;
+    expect(mercuryYearsLeft(remainingYears)).toEqual(4 + " years past your life expectancy");
   });
 
   it('should return the years past life expectancy in Venus years if user is older than inputted life expectancy', function() {
-    let remainingYears = -1.07;
-    expect(venusYearsLeft(remainingYears)).toEqual(1.73 + " years past your life expectancy");
+    let remainingYears = -1;
+    expect(venusYearsLeft(remainingYears)).toEqual(1 + " years past your life expectancy");
   });
 
   it('should return the years past life expectancy in Mars years if user is older than inputted life expectancy', function() {
-    let remainingYears = -1.07;
-    expect(marsYearsLeft(remainingYears)).toEqual(0.57 + " years past your life expectancy");
+    let remainingYears = -1;
+    expect(marsYearsLeft(remainingYears)).toEqual(0 + " years past your life expectancy");
   });
 
   it('should return the years past life expectancy in Jupiter years if user is older than inputted life expectancy', function() {
-    let remainingYears = -1.07;
-    expect(jupiterYearsLeft(remainingYears)).toEqual(0.09 + " years past your life expectancy");
+    let remainingYears = -1;
+    expect(jupiterYearsLeft(remainingYears)).toEqual(0 + " years past your life expectancy");
   });
 
   it('should return the next Earth birthday of the user', function() {
     let birthday = "1997-02-01";
-    let userAge = 21.69;
+    let userAge = 21;
     expect(getNextEarthBirthday(birthday, userAge)).toEqual('Fri Feb 01 2019');
   });
 });

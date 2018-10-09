@@ -3,7 +3,7 @@ export function getAge(birthday) {
   let dateOfBirth = new Date(birthday);
   let today = new Date();
   let myAge = today - dateOfBirth;
-  myAge = (myAge / 31536000000).toFixed(2);
+  myAge = parseInt(myAge / 31536000000);
 
-  return parseFloat(myAge);
+  return myAge;
 }

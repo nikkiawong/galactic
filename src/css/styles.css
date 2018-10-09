@@ -3,7 +3,7 @@ body {
   margin-bottom: 150px;
   text-align: center;
   color: white;
-  background: url('../img/bg.jpg') center center repeat;
+  background: url('../img/bg.jpg') center center repeat fixed;
   font-family: 'Work Sans', sans-serif;
 }
 
