@@ -1,11 +1,17 @@
 export default class AgeConverter {
   constructor(dateString) {
     this.dateString = dateString;
+    this.lifeExpectancy = 100;
     this.age = this.getAge();
     this.mercuryAge = this.convertToMercuryYears();
     this.venusAge = this.convertToVenusYears();
     this.marsAge = this.convertToMarsYears();
     this.jupiterAge = this.convertToJupiterYears();
+    this.yearsLeft = this.calculateYearsLeft();
+    this.mercuryYearsLeft = this.mercuryYearsLeft();
+    this.venusYearsLeft = this.venusYearsLeft();
+    this.marsYearsLeft = this.marsYearsLeft();
+    this.jupiterYearsLeft = this.jupiterYearsLeft();
   }
 
   getAge() {
@@ -52,5 +58,65 @@ export default class AgeConverter {
     age = parseInt(age);
 
     return age;
+  }
+
+  calculateYearsLeft() {
+    let yearsLeft = this.lifeExpectancy - this.age;
+
+    console.log(parseInt(yearsLeft));
+    return parseInt(yearsLeft);
+  }
+
+  mercuryYearsLeft() {
+
+    let yearsRemaining = parseInt(this.yearsLeft / 0.24);
+
+    if (this.yearsLeft < 0) {
+      yearsRemaining = yearsRemaining * (-1);
+      return yearsRemaining + " years past your life expectancy";
+    } else {
+      return "have " + yearsRemaining + " years left to live";
+    }
+
+  }
+
+  venusYearsLeft() {
+
+    let yearsRemaining = parseInt(this.yearsLeft / 0.62);
+
+    if (this.yearsLeft < 0) {
+      yearsRemaining = yearsRemaining * (-1);
+      return yearsRemaining + " years past your life expectancy";
+    } else {
+      return "have " + yearsRemaining + " years left to live";
+    }
+
+  }
+
+  marsYearsLeft() {
+
+    let yearsRemaining = parseInt(this.yearsLeft / 1.88);
+
+    if (this.yearsLeft < 0) {
+      yearsRemaining = yearsRemaining * (-1);
+      return yearsRemaining + " years past your life expectancy";
+    } else {
+      return "have " + yearsRemaining + " years left to live";
+    }
+
+  }
+
+  jupiterYearsLeft() {
+
+    let yearsRemaining = parseInt(this.yearsLeft / 11.86);
+
+    if (this.yearsLeft < 0) {
+      yearsRemaining = yearsRemaining * (-1);
+      return yearsRemaining + " years past your life expectancy";
+    } else {
+      return "have " + yearsRemaining + " years left to live";
+    }
+
+
   }
 }

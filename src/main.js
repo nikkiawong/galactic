@@ -17,30 +17,31 @@ $(document).ready(function() {
     let lifeExpectancy = $("input[type='text']").val();
     $(".results").fadeIn();
 
-    let test = new AgeConverter(birthday, lifeExpectancy);
+    let userAge = new AgeConverter(birthday, lifeExpectancy);
+    console.log(userAge);
 
-    $("#earthAgeText").text(test.age);
-    $("#mercuryAgeText").text(test.mercuryAge);
-    $("#venusAgeText").text(test.venusAge);
-    $("#marsAgeText").text(test.marsAge);
-    $("#jupiterAgeText").text(test.jupiterAge);
+    $("#earthAgeText").text(userAge.age);
+    $("#mercuryAgeText").text(userAge.mercuryAge);
+    $("#venusAgeText").text(userAge.venusAge);
+    $("#marsAgeText").text(userAge.marsAge);
+    $("#jupiterAgeText").text(userAge.jupiterAge);
 
-    let remainingYears = calculateYearsLeft(lifeExpectancy, test.age);
-    $("#earthTimeRemaining").text(remainingYears);
+    // let remainingYears = calculateYearsLeft(lifeExpectancy, userAge.age);
+    $("#earthTimeRemaining").text(userAge.yearsLeft);
 
-    let mercuryLifeExpectancy = mercuryYearsLeft(remainingYears);
-    $("#mercuryTimeRemaining").text(mercuryLifeExpectancy);
+    // let mercuryLifeExpectancy = mercuryYearsLeft(remainingYears);
+    $("#mercuryTimeRemaining").text(userAge.mercuryYearsLeft);
 
-    let venusLifeExpectancy = venusYearsLeft(remainingYears);
-    $("#venusTimeRemaining").text(venusLifeExpectancy);
+    // let venusLifeExpectancy = venusYearsLeft(remainingYears);
+    $("#venusTimeRemaining").text(userAge.venusYearsLeft);
 
-    let marsLifeExpectancy = marsYearsLeft(remainingYears);
-    $("#marsTimeRemaining").text(marsLifeExpectancy);
+    // let marsLifeExpectancy = marsYearsLeft(remainingYears);
+    $("#marsTimeRemaining").text(userAge.marsYearsLeft);
 
-    let jupiterLifeExpectancy = jupiterYearsLeft(remainingYears);
-    $("#jupiterTimeRemaining").text(jupiterLifeExpectancy);
+    // let jupiterLifeExpectancy = jupiterYearsLeft(remainingYears);
+    $("#jupiterTimeRemaining").text(userAge.jupiterYearsLeft);
 
-    let nextBirthday = getNextEarthBirthday(birthday, test.age);
+    let nextBirthday = getNextEarthBirthday(birthday, userAge.age);
     $("#earthBirthday").text(nextBirthday);
   });
 });
