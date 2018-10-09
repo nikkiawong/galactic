@@ -14,7 +14,7 @@ $(document).ready(function() {
   $("#ageForm").submit(function() {
     event.preventDefault();
     let birthday = $("input[type='date']").val();
-    let lifeExpectancy = $("input[type='text']").val();
+    let lifeExpectancy = parseInt($("input[type='text']").val());
     $(".results").fadeIn();
 
     let userAge = new AgeConverter(birthday, lifeExpectancy);
@@ -25,20 +25,10 @@ $(document).ready(function() {
     $("#venusAgeText").text(userAge.venusAge);
     $("#marsAgeText").text(userAge.marsAge);
     $("#jupiterAgeText").text(userAge.jupiterAge);
-
-    // let remainingYears = calculateYearsLeft(lifeExpectancy, userAge.age);
     $("#earthTimeRemaining").text(userAge.yearsLeft);
-
-    // let mercuryLifeExpectancy = mercuryYearsLeft(remainingYears);
     $("#mercuryTimeRemaining").text(userAge.mercuryYearsLeft);
-
-    // let venusLifeExpectancy = venusYearsLeft(remainingYears);
     $("#venusTimeRemaining").text(userAge.venusYearsLeft);
-
-    // let marsLifeExpectancy = marsYearsLeft(remainingYears);
     $("#marsTimeRemaining").text(userAge.marsYearsLeft);
-
-    // let jupiterLifeExpectancy = jupiterYearsLeft(remainingYears);
     $("#jupiterTimeRemaining").text(userAge.jupiterYearsLeft);
 
     let nextBirthday = getNextEarthBirthday(birthday, userAge.age);

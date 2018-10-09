@@ -1,7 +1,7 @@
 export default class AgeConverter {
-  constructor(dateString) {
+  constructor(dateString, lifeExpectancy) {
     this.dateString = dateString;
-    this.lifeExpectancy = 100;
+    this.lifeExpectancy = lifeExpectancy;
     this.age = this.getAge();
     this.mercuryAge = this.convertToMercuryYears();
     this.venusAge = this.convertToVenusYears();
